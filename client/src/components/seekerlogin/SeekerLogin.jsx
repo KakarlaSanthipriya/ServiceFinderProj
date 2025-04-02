@@ -21,9 +21,9 @@ function Login() {
     async function checkUserType(email) {
         try {
           
-            const seekerResponse = await fetch(`http://localhost:4000/customer-api/customers`);
+            const seekerResponse = await fetch(`https://servicefinderproj.onrender.com/customer-api/customers`);
             // console.log("Seeker Response Status:", seekerResponse.status);
-            const providerResponse = await fetch(`http://localhost:4000/serviceprovider-api/serviceproviders`);
+            const providerResponse = await fetch(`https://servicefinderproj.onrender.com/serviceprovider-api/serviceproviders`);
 
             const seekerData = await seekerResponse.json();
             const seekers = seekerData.payload; // Extract payload
