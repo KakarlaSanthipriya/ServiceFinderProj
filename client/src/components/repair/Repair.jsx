@@ -48,7 +48,7 @@ const Repair = () => {
   useEffect(() => {
     async function fetchProviders() {
       try {
-        const response = await fetch(`http://localhost:4000/serviceprovider-api/serviceprovider/${category}`);
+        const response = await fetch(`https://servicefinderproj.onrender.com/serviceprovider-api/serviceprovider/${category}`);
         console.log("response:",response)
         if (!response.ok) {
           throw new Error(`Failed to fetch providers for ${category}.`);
