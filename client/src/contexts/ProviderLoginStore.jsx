@@ -10,7 +10,7 @@ function ProviderLoginStore({children}) {
     async function loginProvider(userCred) {
       try {
         let res = await fetch(
-          `http://localhost:4000/serviceprovider-api/serviceprovider-login`,
+          `https://servicefinderproj.onrender.com/serviceprovider-api/serviceprovider-login`,
           {
             method:"POST", 
             headers:{"Content-type":"application/json"},
