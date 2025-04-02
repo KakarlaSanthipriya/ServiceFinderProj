@@ -11,7 +11,7 @@ function SeekerLoginStore({children}) {
     async function loginUser(userCred) {
       try {
         let res = await fetch(
-          `http://localhost:4000/customer-api/customer-login`,
+          `https://servicefinderproj.onrender.com/customer-api/customer-login`,
           {
             method:"POST", 
             headers:{"Content-type":"application/json"},
