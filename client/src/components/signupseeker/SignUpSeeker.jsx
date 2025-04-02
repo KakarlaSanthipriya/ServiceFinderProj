@@ -17,7 +17,7 @@ function SignUpSeeker() {
 
   
   async function handleFormSubmit(userObj){
-    let res = await fetch(`http://localhost:4000/customer-api/customer`, {
+    let res = await fetch(`https://servicefinderproj.onrender.com/customer-api/customer`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(userObj),
