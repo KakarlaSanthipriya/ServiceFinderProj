@@ -127,7 +127,7 @@ const Booking = () => {
 
     try {
       // Update customer's booking details
-      let res = await fetch(`http://localhost:4000/customer-api/customers/${currentUser.username}/booking`, {
+      let res = await fetch(`https://servicefinderproj.onrender.com/customer-api/customers/${currentUser.username}/booking`, {
         method: 'PUT',
         headers: {
           "Content-Type": "application/json",
@@ -141,7 +141,7 @@ const Booking = () => {
       }
 
       // Update provider's booking details
-      res = await fetch(`http://localhost:4000/serviceprovider-api/serviceproviders/${provider.username}/booking`, {
+      res = await fetch(`https://servicefinderproj.onrender.com/serviceprovider-api/serviceproviders/${provider.username}/booking`, {
         method: 'PUT',
         headers: {
           "Content-Type": "application/json",
