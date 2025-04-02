@@ -13,8 +13,8 @@ function ResetPassword() {
         setMessage("");
 
         try {
-            const seekerResponse = await fetch("http://localhost:4000/customer-api/customers");
-            const providerResponse = await fetch("http://localhost:4000/serviceprovider-api/serviceproviders");
+            const seekerResponse = await fetch("https://servicefinderproj.onrender.com/customer-api/customers");
+            const providerResponse = await fetch("https://servicefinderproj.onrender.com/serviceprovider-api/serviceproviders");
 
             const seekersData = await seekerResponse.json();
             const seekers = await seekersData.payload
@@ -31,7 +31,7 @@ function ResetPassword() {
 
             if (user) {
                 if(userType=='seeker'){
-                await fetch(`http://localhost:4000/${userApi}-api/${userType}/${user._id}`, {
+                await fetch(`https://servicefinderproj.onrender.com/${userApi}-api/${userType}/${user._id}`, {
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ ...user, password: newPassword })
