@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { providerLoginContext } from '../../contexts/providerLoginContext'; // Assuming you have a provider context
-import './ProviderDashboard.css'; // Add necessary CSS
+import './ProviderDashBoard.css'; // Add necessary CSS
 
 function ProviderDashboard() {
   const { currentProvider, setCurrentProvider } = useContext(providerLoginContext);
