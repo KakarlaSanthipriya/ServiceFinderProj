@@ -46,7 +46,7 @@ function ProviderDashboard() {
         closingTime,
       };
 
-      const res = await fetch(`http://localhost:4000/serviceprovider-api/serviceproviders/${currentProvider._id}/profile-update`, {
+      const res = await fetch(`https://servicefinderproj.onrender.com/serviceprovider-api/serviceproviders/${currentProvider._id}/profile-update`, {
         method: 'PUT',
         headers: { 
           'Content-Type': 'application/json',
@@ -77,7 +77,7 @@ function ProviderDashboard() {
   
       // Update provider's booking details in the backend
       await fetch(
-        `http://localhost:4000/serviceprovider-api/serviceproviders/${currentProvider.username}/booking-update`,
+        `https://servicefinderproj.onrender.com/serviceprovider-api/serviceproviders/${currentProvider.username}/booking-update`,
         {
           method: 'PUT',
           headers: {
@@ -90,7 +90,7 @@ function ProviderDashboard() {
   console.log("seeker name", booking.seekerName)
       // Fetch seeker data
       const seekerRes = await fetch(
-        `http://localhost:4000/customer-api/customers/${booking.seekerName}`,
+        `https://servicefinderproj.onrender.com/customer-api/customers/${booking.seekerName}`,
         {
           headers: {
             Authorization: `Bearer ${sessionStorage.getItem('token')}`,
@@ -113,7 +113,7 @@ function ProviderDashboard() {
   
         // Update seeker's booking details in the backend
         await fetch(
-          `http://localhost:4000/customer-api/customers/${seeker.username}/booking-update`,
+          `https://servicefinderproj.onrender.com/customer-api/customers/${seeker.username}/booking-update`,
           {
             method: 'PUT',
             headers: {
@@ -146,7 +146,7 @@ function ProviderDashboard() {
   
       // Update provider's booking details in the backend
       await fetch(
-        `http://localhost:4000/serviceprovider-api/serviceproviders/${currentProvider.username}/booking-update`,
+        `https://servicefinderproj.onrender.com/serviceprovider-api/serviceproviders/${currentProvider.username}/booking-update`,
         {
           method: 'PUT',
           headers: {
@@ -159,7 +159,7 @@ function ProviderDashboard() {
   
       // Fetch seeker data
       const seekerRes = await fetch(
-        `http://localhost:4000/customer-api/customers/${booking.seekerName}`,
+        `https://servicefinderproj.onrender.com/customer-api/customers/${booking.seekerName}`,
         {
           headers: {
             Authorization: `Bearer ${sessionStorage.getItem('token')}`,
@@ -181,7 +181,7 @@ function ProviderDashboard() {
   
         // Update seeker's booking details in the backend
         await fetch(
-          `http://localhost:4000/customer-api/customers/${seeker.username}/booking-update`,
+          `https://servicefinderproj.onrender.com/customer-api/customers/${seeker.username}/booking-update`,
           {
             method: 'PUT',
             headers: {
