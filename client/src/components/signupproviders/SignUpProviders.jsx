@@ -68,7 +68,7 @@ const SignUpProviders = () => {
       formDataObj.append('pricing[high][max]', formData.pricing_high_max);
 
       // Send the FormData to the backend
-      const response = await fetch(`http://localhost:4000/serviceprovider-api/serviceprovider`, {
+      const response = await fetch(`https://servicefinderproj.onrender.com/serviceprovider-api/serviceprovider`, {
         method: 'POST',
         body: formDataObj, // No need to set Content-Type header for FormData
       });
