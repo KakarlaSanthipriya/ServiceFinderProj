@@ -10,7 +10,12 @@ app.use(cors({
 
 //import MongoClient
 const {MongoClient}=require('mongodb')
-let mClient=new MongoClient(process.env.DB_URL)
+let mClient = new MongoClient(process.env.DB_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    tls: true // Enable TLS (or false if TLS is not required)
+});
+
 //connect mongoDB server
 mClient.connect()
 .then((connectionObj)=>{
